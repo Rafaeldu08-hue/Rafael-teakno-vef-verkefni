@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1</title>
+    <link rel="stylesheet" href="css/pico.fuchsia.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="nav-box">
+    <div class="nav-header">
+      <h1 class="nav-title">Formula 1</h1>
+      <a href="#">
+        <span class="icon-home"></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+    <nav class="nav-content">
+      <a href="#">Teams</a>
+      <a href="#">Drivers</a>
+      <a href="#">Schedule</a>
+      <a href="#">Standings</a>
+      <a href="#">History</a>
+      <input type="search" placeholder="Search" />
+      <button id="themeBtn" class="secondary" title="Play F1 theme">♫</button>
+      <button id="loginBtn" data-target="modal-example"
+          onclick="toggleModal(event)"
+          class="primary">Login</button>
+      <audio id="themeAudio" preload="auto" src="New%202025%20F1%20Opening%20Titles.mp3" style="display:none"></audio>
+    </nav>
+  </header>
+  <div class="announcement-bar">
+    <p>
+      Welcome to Formula 1 – Catch the latest races – Experience the speed!
+    </p>
+  </div>
+  <div class="image-loader" id="loader">
+    <svg viewBox="0 0 50 50" class="spinner">
+      <circle cx="25" cy="25" r="20" fill="none" stroke-width="4"></circle>
+    </svg>
+  </div>
+  <header class="hero">
+    <div class="slideshow">
+      <img src="myndir/Formula 1.jpg" class="slide active">
+    </div>
+    <img src="myndir/Logo-1.svg" class="hero-logo" alt="Logo">
+  </header>
+  <main class="page-container">
+
+    <section class="grid">
+      <article>
+        <h1>The Fastest Racing Series</h1>
+        <p>Formula 1 is the world's premier motorsport competition, featuring the fastest single-seater racing cars and the most skilled drivers on the planet. With races held on iconic circuits across six continents, F1 combines cutting-edge technology, strategy, and extraordinary athleticism.</p>
+      </article>
+      <article>
+        <h1>Technology & Innovation</h1>
+        <p>F1 vehicles are engineering marvels, featuring hybrid power units that produce over 1000 horsepower, advanced aerodynamics, and sophisticated onboard computer systems. Every component is designed to maximize performance while adhering to strict regulations that ensure competitive balance among teams.</p>
+      </article>
+      <article>
+        <h1>Championship Glory</h1>
+        <p>Drivers from around the world compete in a 24-race championship season to earn the prestigious World Driver's Championship title. Every point matters, with dramatic battles at each circuit testing the limits of both machine and driver in pursuit of ultimate victory.</p>
+      </article>
+    </section>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Driver</th>
+          <th scope="col">Team</th>
+          <th scope="col">Wins</th>
+          <th scope="col">Championship Titles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Max Verstappen</th>
+          <td data-label="Team">Red Bull Racing</td>
+          <td data-label="Wins">63</td>
+          <td data-label="Championship Titles">3</td>
+        </tr>
+        <tr>
+          <th scope="row">Lewis Hamilton</th>
+          <td data-label="Team">Mercedes</td>
+          <td data-label="Wins">105</td>
+          <td data-label="Championship Titles">7</td>
+        </tr>
+        <tr>
+          <th scope="row">Charles Leclerc</th>
+          <td data-label="Team">Ferrari</td>
+          <td data-label="Wins">5</td>
+          <td data-label="Championship Titles">0</td>
+        </tr>
+        <tr>
+          <th scope="row">Lando Norris</th>
+          <td data-label="Team">McLaren</td>
+          <td data-label="Wins">3</td>
+          <td data-label="Championship Titles">0</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row">Michael Schumacher</th>
+          <td data-label="Team">Ferrari/Benetton</td>
+          <td data-label="Wins">91</td>
+          <td data-label="Championship Titles">7</td>
+        </tr>
+      </tfoot>            
+    </table>
+    <details name="Mercedes">
+      <summary role="button" class="outline">Mercedes-AMG Petronas</summary>
+      <ul>
+        <li>Mercedes is one of the most successful teams in F1 history, with multiple world championships and record-breaking performances. Known for innovation and excellence, they have dominated the 1.6L turbo hybrid era.</li>
+        <li>The team features talented drivers and an engineering crew that consistently pushes the boundaries of performance and technology in Formula 1 racing.</li>
+      </ul>
+    </details>
+    <details name="Ferrari">
+      <summary role="button" class="outline">Scuderia Ferrari</summary>
+      <ul>
+        <li>Ferrari is the legendary Italian team with the longest history in Formula 1, known for passion, innovation, and distinctive red cars. They have won 16 Constructors' Championships throughout their storied career.</li>
+        <li>The Scuderia has produced some of F1's greatest drivers and vehicles, maintaining heritage while competing at the highest level of motorsport.</li>
+      </ul>
+    </details>
+    <details name="Red Bull" open>
+      <summary role="button" class="outline">Red Bull Racing</summary>
+      <ul>
+        <li>Red Bull Racing has emerged as a powerhouse in modern Formula 1, dominating the recent seasons with innovative car design and exceptional driving talent. The team has won multiple championships and demonstrates consistent excellence.</li>
+        <li>Known for pushing technical boundaries and developing world-class talent, Red Bull continues to set the standard for competitiveness in contemporary Formula 1 racing.</li>
+      </ul>
+    </details>
+    <details name="McLaren">
+      <summary role="button" class="outline">McLaren</summary>
+      <ul>
+        <li>McLaren is a British racing team with a rich heritage dating back to 1963. Known for innovative design and remarkable achievements, McLaren has won numerous championships and produced legendary drivers.</li>
+        <li>The team combines cutting-edge technology with strategic prowess, consistently challenging for victories and podium finishes in the competitive Formula 1 championship.</li>
+      </ul>
+    </details>
+    <form>
+      <fieldset>
+        <p>
+          <label>
+            Name:
+            <input type="text" name="nafn" required pattern="[A-Za-z ]" placeholder="Enter your name">
+          </label>
+        </p>
+        <p>
+          <label>
+            Email:
+            <input type="email" name="email" required placeholder="email@example.com">
+          </label>
+        </p>
+        <p>
+          <label>
+            Phone:
+            <input type="tel" name="simanumer" required placeholder="+1-234-567-8900">
+          </label>
+        </p>
+        <p>
+          <label>
+            Age:
+            <input type="number" name="aldur" min="0" max="120" required>
+          </label>
+        </p>
+        <p>
+          Favorite Team:
+          <label><input type="radio" name="team" value="mercedes" required> Mercedes</label>
+          <label><input type="radio" name="team" value="redbull"> Red Bull</label>
+          <label><input type="radio" name="team" value="ferrari"> Ferrari</label>
+          <label><input type="radio" name="team" value="mclaren"> McLaren</label>
+          <label><input type="radio" name="team" value="alpine"> Alpine</label>
+          <label><input type="radio" name="team" value="astonmartin"> Aston Martin</label>
+          <label><input type="radio" name="team" value="haas"> Haas</label>
+          <label><input type="radio" name="team" value="alfa"> Alfa Romeo</label>
+          <label><input type="radio" name="team" value="alphatauri"> AlphaTauri</label>
+          <label><input type="radio" name="team" value="williams"> Williams</label>
+        </p>
+        <p>
+          <label>
+            Interest:
+            <select name="interest" required>
+              <option value="" disabled selected>Select your interest</option>
+              <option value="fan">Casual Fan</option>
+              <option value="enthusiast">F1 Enthusiast</option>
+              <option value="engineer">Engineering</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>
+            Comments:
+            <textarea name="athugasemd" rows="4" cols="40" placeholder="Share your thoughts on Formula 1..." required></textarea>
+          </label>
+        </p>
+        <fieldset>
+          <label>
+            <input name="terms" type="checkbox" role="switch" />
+            I agree to the terms
+          </label>
+          <label>
+            <input name="opt-in" type="checkbox" role="switch" checked />
+            Send me F1 news and updates
+          </label>
+        </fieldset>
+        <p><input type="submit" value="Submit"></p>
+      </fieldset>
+    </form>
+    <hr>
+    <section class="container">
+      <h5>Formula 1 - The Greatest Motorsport Series</h5>
+    </section>
+    <footer>
+      <span class="footer-text">© 2026 Rafael Þorsteinn Duarte - Tækniskólinn</span>
+    </footer>
+  </main>
+  <dialog id="modal-example">
+    <article>
+      <header>
+        <button
+          aria-label="Close"
+          rel="prev"
+          data-target="modal-example"
+          onclick="toggleModal(event)"
+        ></button>
+        <h3>Choose Your F1 Experience!</h3>
+      </header>
+      <p>
+        Sign in to access exclusive F1 content or continue browsing.
+      </p>
+      <footer>
+        <button
+          role="button"
+          class="secondary"
+          data-target="modal-example"
+          onclick="toggleModal(event)">
+          Cancel
+        </button>
+        <button id="continueBtn" class="primary">Continue</button>
+      </footer>
+    </article>
+  </dialog>
+  <dialog id="login-modal">
+    <article>
+      <header>
+        <h3>Sign In</h3>
+        <button
+          aria-label="Close"
+          onclick="closeLogin()">
+        </button>
+      </header>
+      <form action="admin.html" method="get">
+        <label>
+          Enter email
+          <input type="email" required placeholder="email@example.com">
+        </label>
+        <label>
+          Enter password
+          <input type="password" required placeholder="••••••••">
+        </label>
+        <button type="submit" class="primary">
+          Sign In
+        </button>
+      </form>
+    </article>
+  </dialog>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeBtn = document.getElementById('themeBtn');
+      const audio = document.getElementById('themeAudio');
+      if (themeBtn && audio) {
+        themeBtn.addEventListener('click', () => {
+          if (audio.paused) {
+            audio.play();
+            themeBtn.textContent = '🔊';
+          } else {
+            audio.pause();
+            audio.currentTime = 0;
+            themeBtn.textContent = '♫';
+          }
+        });
+      }
+    });
+  </script>
+  <script src="js/modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/pico.fuchsia.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/adminstyle.css">
+</head>
+
+<body>
+
+<header class="admin-header container">
+  <nav class="admin-nav">
+    <div class="admin-logo">
+      <strong>F1 DASHBOARD</strong>
+    </div>
+    <div class="admin-links">
+      <a href="index.html">← Back to Main</a>
+      <a href="#">Teams</a>
+      <a href="#">Drivers</a>
+      <a href="#">Logout</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container admin-grid">
+
+  <!-- LEFT SECTION -->
+  <section class="admin-left">
+    <h2>🏎️ Formula 1 Management</h2>
+    <p>Welcome to the Formula 1 Administration Dashboard. Monitor teams, drivers, and championship statistics.</p>
+
+    <article class="admin-menu">
+      <div class="menu-item">
+        <button onclick="toggleItem(this)">Current Teams <span>›</span></button>
+        <div class="submenu">
+          <h4>Active F1 Teams 2024</h4>
+          <ul>
+            <li><strong>Mercedes-AMG Petronas:</strong> Drivers - Lewis Hamilton, George Russell</li>
+            <li><strong>Red Bull Racing:</strong> Drivers - Max Verstappen, Sergio Pérez</li>
+            <li><strong>Scuderia Ferrari:</strong> Drivers - Charles Leclerc, Carlos Sainz</li>
+            <li><strong>McLaren:</strong> Drivers - Lando Norris, Oscar Piastri</li>
+            <li><strong>Alpine F1:</strong> Drivers - Esteban Ocon, Pierre Gasly</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <button onclick="toggleItem(this)">Top Drivers <span>›</span></button>
+        <div class="submenu">
+          <h4>Championship Leaders</h4>
+          <table>
+            <tr>
+              <th>Driver</th>
+              <th>Points</th>
+              <th>Wins</th>
+            </tr>
+            <tr>
+              <td>Max Verstappen</td>
+              <td>445</td>
+              <td>63</td>
+            </tr>
+            <tr>
+              <td>Lewis Hamilton</td>
+              <td>382</td>
+              <td>105</td>
+            </tr>
+            <tr>
+              <td>Charles Leclerc</td>
+              <td>356</td>
+              <td>5</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <button onclick="toggleItem(this)">Race Calendar <span>›</span></button>
+        <div class="submenu">
+          <h4>Upcoming Races</h4>
+          <ul>
+            <li>🏁 Bahrain Grand Prix - March 3, 2024</li>
+            <li>🏁 Saudi Arabian Grand Prix - March 9, 2024</li>
+            <li>🏁 Australian Grand Prix - March 24, 2024</li>
+            <li>🏁 Japanese Grand Prix - April 7, 2024</li>
+            <li>🏁 Shanghai Grand Prix - April 21, 2024</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <button onclick="toggleItem(this)">Team Statistics <span>›</span></button>
+        <div class="submenu">
+          <h4>Constructor Championship</h4>
+          <table>
+            <tr>
+              <th>Team</th>
+              <th>Points</th>
+              <th>Titles</th>
+            </tr>
+            <tr>
+              <td>Red Bull Racing</td>
+              <td>667</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Mercedes</td>
+              <td>598</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Ferrari</td>
+              <td>389</td>
+              <td>16</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <button onclick="toggleItem(this)">Track Information <span>›</span></button>
+        <div class="submenu">
+          <h4>Famous F1 Circuits</h4>
+          <ul>
+            <li><strong>Monaco Grand Prix:</strong> 3.337 km, 78 laps - Most prestigious race</li>
+            <li><strong>Silverstone (UK):</strong> 5.891 km, 52 laps - Home of British racing</li>
+            <li><strong>Monza (Italy):</strong> 5.793 km, 53 laps - Speed specialist circuit</li>
+            <li><strong>Suzuka (Japan):</strong> 5.807 km, 53 laps - Figure-eight layout</li>
+            <li><strong>Spa-Francorchamps (Belgium):</strong> 7.004 km, 44 laps - Challenging weather</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- RIGHT SECTION - STATS -->
+  <aside class="admin-right">
+    <article class="stats">
+      <h4>📊 Dashboard Overview</h4>
+      <div class="stat-box">
+        <strong>Active Teams</strong>
+        <span>10</span>
+      </div>
+      <div class="stat-box">
+        <strong>Total Drivers</strong>
+        <span>22</span>
+      </div>
+      <div class="stat-box">
+        <strong>Races This Season</strong>
+        <span>24</span>
+      </div>
+      <div class="stat-box">
+        <strong>Championship Points</strong>
+        <span>1000</span>
+      </div>
+    </article>
+
+    <article class="quick-links">
+      <h4>🏆 Quick Stats</h4>
+      <ul>
+        <li><strong>Most Wins:</strong> Lewis Hamilton (105)</li>
+        <li><strong>Most Titles:</strong> Michael Schumacher & Lewis Hamilton (7)</li>
+        <li><strong>Current Champion:</strong> Max Verstappen</li>
+        <li><strong>Longest Streak:</strong> Mercedes (8 Constructors' Titles)</li>
+        <li><strong>Youngest Champion:</strong> Sebastian Vettel (23 years)</li>
+      </ul>
+    </article>
+
+    <article class="f1-facts">
+      <h4>⚡ F1 Facts</h4>
+      <p>Formula 1 vehicles reach speeds of 230+ mph (370 km/h) and experience up to 5G forces in corners. The sport generates over $1.5 billion in annual revenue and attracts over 1 billion viewers worldwide.</p>
+    </article>
+  </aside>
+
+</main>
+
+<footer>
+  <a href="https://www.formula1.com" target="_blank">Official F1 Website</a>
+  <a href="#">Privacy Policy</a>
+  <a href="#">Contact</a>
+</footer>
+
+<script>
+    function toggleItem(button) {
+        const submenu = button.nextElementSibling;
+        submenu.classList.toggle("open");
+        button.classList.toggle("open");
+    }
+</script>
+</body>
+</html>
